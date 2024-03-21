@@ -39,7 +39,7 @@ const App = () => {
  return (
     <div className="App">
       <header>
-        <h1>Låvefest hos Stortrøn!!!</h1>
+        <h1>James Bond Bøker</h1>
         <SearchBar onSearch={handleSearch} />
       </header>
       <main>
