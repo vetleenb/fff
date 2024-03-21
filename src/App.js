@@ -34,24 +34,29 @@ const App = () => {
   };
 
 
-    return (
+ return (
     <div className="App">
-      <h1>James Bond Books</h1>
-      <Searchbar onSearch={handleSearch} /> {/* Legg til søkekomponenten */}
-      {searchResults.length > 0 ? (
-        <searchresults results={searchResults} /> 
-      {/* Bruk SearchResults hvis det er søkeresultater */}
-      ) : (
-        <div className="book-list">
-          {books.map((book, index) => (
-            <moviecard key={index} book={book} />
-          ))}
-        </div>
-      )}
+      <header>
+        <h1>James Bond Books</h1>
+        <SearchBar onSearch={handleSearch} />
+      </header>
+      <main>
+        {searchResults.length > 0 ? (
+          <SearchResults results={searchResults} />
+        ) : (
+          <div className="book-list">
+            {books.map((book, index) => (
+              <BookCard key={index} book={book} />
+            ))}
+          </div>
+        )}
+      </main>
+      <footer>
+        <p>&copy; 2024 James Bond Books</p>
+      </footer>
     </div>
   );
 };
-
 
 export default App;
 
