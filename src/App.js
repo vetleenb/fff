@@ -3,9 +3,12 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import SearchBar from '.components/searchbar';
+import searchresults from '.components/searchresults';
+import moviecard from '.components/moviecard';
 
 const App = () => {
   const [books, setBooks] = useState([]);
+  const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
     const fetchBooks = async () => {
@@ -20,32 +23,34 @@ const App = () => {
     fetchBooks();
   }, []);
 
+
     const handleSearch = async (searchTerm) => {
     try {
       const response = await axios.get(`https://openlibrary.org/search.json?q=${searchTerm}`);
-      setBooks(response.data.docs);
+      setSearchResults(response.data.docs);
     } catch (error) {
       console.error('Error searching books:', error);
     }
   };
 
-  return (
+
+    return (
     <div className="App">
       <h1>James Bond Books</h1>
       <SearchBar onSearch={handleSearch} /> {/* Legg til søkekomponenten */}
-      <div className="book-list">
-        {books.map((book, index) => (
-          <div key={index} className="book">
-            <h2>{book.title}</h2>
-            <p>Author: {book.authors}</p>
-            <p>Year: {book.first_publish_year}</p>
-            {/* Add more book details as needed */}
-          </div>
-        ))}
-      </div>
+      {searchResults.length > 0 ? (
+        <SearchResults results={searchResults} /> {/* Bruk SearchResults hvis det er søkeresultater */}
+      ) : (
+        <div className="book-list">
+          {books.map((book, index) => (
+            <BookCard key={index} book={book} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
+
 
 export default App;
 
