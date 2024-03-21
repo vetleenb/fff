@@ -20,9 +20,19 @@ const App = () => {
     fetchBooks();
   }, []);
 
+    const handleSearch = async (searchTerm) => {
+    try {
+      const response = await axios.get(`https://openlibrary.org/search.json?q=${searchTerm}`);
+      setBooks(response.data.docs);
+    } catch (error) {
+      console.error('Error searching books:', error);
+    }
+  };
+
   return (
     <div className="App">
       <h1>James Bond Books</h1>
+      <SearchBar onSearch={handleSearch} /> {/* Legg til søkekomponenten */}
       <div className="book-list">
         {books.map((book, index) => (
           <div key={index} className="book">
@@ -38,3 +48,6 @@ const App = () => {
 };
 
 export default App;
+
+
+   
