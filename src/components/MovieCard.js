@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BookCard = ({ book }) => {
+const MovieCard = ({ book }) => {
   return (
     <div className="book">
       <h2>{book.title}</h2>
@@ -11,4 +11,4 @@ const BookCard = ({ book }) => {
   );
 };
 
-export default BookCard;
+export default MovieCard;
