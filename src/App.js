@@ -2,9 +2,9 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Searchbar from '.components/searchbar';
-import searchresults from '.components/searchresults';
-import moviecard from '.components/moviecard';
+import Searchbar from './components/searchbar';
+import searchresults from './components/searchresults';
+import moviecard from './components/moviecard';
 
 const App = () => {
   const [books, setBooks] = useState([]);
