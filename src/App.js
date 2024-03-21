@@ -54,7 +54,7 @@ const App = () => {
         )}
       </main>
       <footer>
-        <p>&copy; 2024 James Bond Bøker</p>
+        <p>&copy; 2024 Vetle Enberg Oblig</p>
       </footer>
     </div>
   );
