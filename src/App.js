@@ -1,7 +1,7 @@
 
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+
 import SearchBar from './components/SearchBar';
 import SearchResults from './components/SearchResults';
 import MovieCard from './components/MovieCard';
@@ -13,8 +13,9 @@ const App = () => {
   useEffect(() => {
     const fetchBooks = async () => {
       try {
-        const response = await axios.get('https://openlibrary.org/subjects/james_bond.json?published_in=20XX');
-        setBooks(response.data.works);
+        const response = await fetch('https://openlibrary.org/subjects/james_bond.json?published_in=20XX');
+        const data = await response.json();
+        setBooks(data.works);
       } catch (error) {
         console.error('Error fetching books:', error);
       }
@@ -23,15 +24,16 @@ const App = () => {
     fetchBooks();
   }, []);
 
-
-    const handleSearch = async (searchTerm) => {
+  const handleSearch = async (searchTerm) => {
     try {
-      const response = await axios.get(`https://openlibrary.org/search.json?q=${searchTerm}`);
-      setSearchResults(response.data.docs);
+      const response = await fetch(`https://openlibrary.org/search.json?q=${searchTerm}`);
+      const data = await response.json();
+      setSearchResults(data.docs);
     } catch (error) {
       console.error('Error searching books:', error);
     }
   };
+
 
 
  return (
