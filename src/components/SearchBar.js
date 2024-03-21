@@ -16,11 +16,11 @@ const SearchBar = ({ onSearch }) => {
     <form onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="Search for James Bond books..."
+        placeholder="Søk etter moren din..."
         value={searchTerm}
         onChange={handleInputChange}
       />
-      <button type="submit">Search</button>
+      <button type="submit">Søk</button>
     </form>
   );
 };
