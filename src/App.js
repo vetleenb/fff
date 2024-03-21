@@ -39,7 +39,7 @@ const App = () => {
  return (
     <div className="App">
       <header>
-        <h1>James Bond Books</h1>
+        <h1>James Bond Bøker</h1>
         <SearchBar onSearch={handleSearch} />
       </header>
       <main>
@@ -54,7 +54,7 @@ const App = () => {
         )}
       </main>
       <footer>
-        <p>&copy; 2024 James Bond Books</p>
+        <p>&copy; 2024 James Bond Bøker</p>
       </footer>
     </div>
   );
