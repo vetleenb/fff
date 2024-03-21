@@ -1,11 +1,11 @@
 import React from 'react';
-import BookCard from './BookCard';
+import MovieCard from './MovieCard';
 
 const SearchResults = ({ results }) => {
   return (
     <div className="search-results">
       {results.map((book, index) => (
-        <BookCard key={index} book={book} />
+        <MovieCard key={index} book={book} />
       ))}
     </div>
   );
