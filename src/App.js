@@ -1,7 +1,7 @@
 
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+//import axios from 'axios';
 import SearchBar from './components/SearchBar';
 import SearchResults from './components/SearchResults';
 import MovieCard from './components/MovieCard';
