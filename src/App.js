@@ -39,7 +39,8 @@ const App = () => {
       <h1>James Bond Books</h1>
       <SearchBar onSearch={handleSearch} /> {/* Legg til søkekomponenten */}
       {searchResults.length > 0 ? (
-        <SearchResults results={searchResults} /> {/* Bruk SearchResults hvis det er søkeresultater */}
+        <SearchResults results={searchResults} /> 
+      {/* Bruk SearchResults hvis det er søkeresultater */}
       ) : (
         <div className="book-list">
           {books.map((book, index) => (
