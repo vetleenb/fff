@@ -2,9 +2,9 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import searchbar from './components/searchbar';
-import searchresults from './components/searchresults';
-import moviecard from './components/moviecard';
+import SearchBar from './components/SearchBar';
+import SearchResults from './components/SearchResults';
+import MovieCard from './components/MovieCard';
 
 const App = () => {
   const [books, setBooks] = useState([]);
@@ -38,15 +38,15 @@ const App = () => {
     <div className="App">
       <header>
         <h1>James Bond Books</h1>
-        <Searchbar onSearch={handleSearch} />
+        <SearchBar onSearch={handleSearch} />
       </header>
       <main>
-        {searchresults.length > 0 ? (
-          <searchresults results={searchresults} />
+        {searchResults.length > 0 ? (
+          <SearchResults results={searchResults} />
         ) : (
           <div className="book-list">
             {books.map((book, index) => (
-              <moviecard key={index} book={book} />
+              <MovieCard key={index} book={book} />
             ))}
           </div>
         )}
