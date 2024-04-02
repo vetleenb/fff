@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const SearchBar = ({ onSearch }) => {
+const MySearchBar = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleInputChange = (event) => {
@@ -25,4 +25,4 @@ const SearchBar = ({ onSearch }) => {
   );
 };
 
-export default SearchBar;
+export default MySearchBar;
