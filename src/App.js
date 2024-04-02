@@ -2,7 +2,7 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 
-import SearchBar from './components/SearchBar';
+import MySearchBar from './components/MySearchBar';
 import SearchResults from './components/SearchResults';
 import BookCard from './components/BookCard';
 
@@ -40,7 +40,7 @@ const App = () => {
     <div className="App">
       <header>
         <h1>James Bond Bøker</h1>
-        <SearchBar onSearch={handleSearch} />
+        <MySearchBar onSearch={handleSearch} />
       </header>
       <main>
         {searchResults.length > 0 ? (
