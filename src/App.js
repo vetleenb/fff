@@ -14,8 +14,8 @@ const App = () => {
     const fetchBooks = async () => {
       try {
         const response = await fetch('https://openlibrary.org/subjects/james_bond.json?published_in=20XX');
-        const data = await response.json();
-        setBooks(data.works);
+        const info = await response.json();
+        setBooks(info.works);
       } catch (error) {
         console.error('Error fetching books:', error);
       }
@@ -27,8 +27,8 @@ const App = () => {
   const handleSearch = async (searchTerm) => {
     try {
       const response = await fetch(`https://openlibrary.org/search.json?q=${searchTerm}`);
-      const data = await response.json();
-      setSearchResults(data.docs);
+      const info = await response.json();
+      setSearchResults(info.docs);
     } catch (error) {
       console.error('Error searching books:', error);
     }
