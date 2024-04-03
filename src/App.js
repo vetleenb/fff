@@ -13,8 +13,8 @@ const App = () => {
   useEffect(() => {
     const fetchBooks = async () => {
       try {
-        const response = await fetch('https://openlibrary.org/subjects/james_bond.json?published_in=20XX');
-        const info = await response.json();
+        const responder = await fetch('https://openlibrary.org/subjects/james_bond.json?published_in=20XX');
+        const info = await responder.json();
         setBooks(info.works);
       } catch (error) {
         console.error('Error fetching books:', error);
@@ -26,8 +26,8 @@ const App = () => {
 
   const handleSearch = async (searchTerm) => {
     try {
-      const response = await fetch(`https://openlibrary.org/search.json?q=${searchTerm}`);
-      const info = await response.json();
+      const responder = await fetch(`https://openlibrary.org/search.json?q=${searchTerm}`);
+      const info = await responder.json();
       setSearchResults(info.docs);
     } catch (error) {
       console.error('Error searching books:', error);
