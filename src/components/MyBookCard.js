@@ -17,7 +17,7 @@ export default MyBookCard;
 
 
 //{book.cover_i && <img src={`https://covers.openlibrary.org/b/id/${book.cover_i}-L.jpg`} alt="Book Cover" />}
-
+//{book.cover_i && <img src={`https://covers.openlibrary.org/b/id/${book.cover_i}-L.jpg`} alt="Book Cover" />}
 
 
 
