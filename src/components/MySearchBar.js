@@ -16,7 +16,7 @@ const MySearchBar = ({ onSearch }) => {
     <form onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="Leke litt med tanken..."
+        placeholder="Søk her..."
         value={searchTerm}
         onChange={handleInputChange}
       />
