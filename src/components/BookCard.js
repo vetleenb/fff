@@ -1,8 +1,8 @@
 import React from 'react';
 
-const BookCard = ({ book }) => {
+const BookCard = ({ book, index }) => {
   return (
-    <div className="book">
+    <div className="book" key={index}>
       <h2>{book.title}</h2>
       <p>Forfatter: {book.author_name ? book.author_name.join(', ') : 'Ian Fleming'}</p>
       <p>År: {book.first_publish_year}</p>
