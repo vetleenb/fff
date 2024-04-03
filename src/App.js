@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 
 import MySearchBar from './components/MySearchBar';
 import MySearchResults from './components/MySearchResults';
-import MyBookCard from './components/MyBookCard';
+import BookCard from './components/BookCard';
 
 const App = () => {
   const [books, setBooks] = useState([]);
@@ -48,7 +48,7 @@ const App = () => {
         ) : (
           <div className="book-list">
             {books.map((book, index) => (
-              <MyBookCard key={index} book={book} />
+              <BookCard key={index} book={book} />
             ))}
           </div>
         )}
