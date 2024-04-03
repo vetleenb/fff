@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const BookCard = ({ book }) => {
+const MyBookCard = ({ book }) => {
   return (
     <div className="book">
       <h2>{book.title}</h2>
@@ -13,7 +13,7 @@ const BookCard = ({ book }) => {
   );
 };
 
-export default BookCard;
+export default MyBookCard;
 
 
 //{book.cover_i && <img src={`https://covers.openlibrary.org/b/id/${book.cover_i}-L.jpg`} alt="Book Cover" />}
