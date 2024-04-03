@@ -12,6 +12,7 @@ const MySearchBar = ({ onSearch }) => {
     onSearch(searchTerm);
   };
 
+  
   return (
     <form onSubmit={handleSubmit}>
       <input
