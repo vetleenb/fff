@@ -1,18 +1,8 @@
 import React from 'react';
 import BookCard from './BookCard';
 
-//const SearchResults = ({ results }) => {
-//  return (
- //   <div className="search-results">
- //     {results.map((book, index) => (
-  //      <MovieCard key={index} book={book} />
-  //    ))}
-  //  </div>
- // );
-//};
 
-//export default SearchResults;
-const SearchResults = ({ results }) => {
+const MySearchResults = ({ results }) => {
   return (
     <div className="search-results">
       {results.map((result, index) => (
@@ -28,4 +18,4 @@ const SearchResults = ({ results }) => {
   );
 };
 
-export default SearchResults;
+export default MySearchResults;
