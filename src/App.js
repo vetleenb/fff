@@ -8,7 +8,7 @@ import BookCard from './components/BookCard';
 
 const App = () => {
   const [books, setBooks] = useState([]);
-  const [searchResults, setSearchResults] = useState([]);
+  const [mysearchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
     const fetchBooks = async () => {
@@ -43,8 +43,8 @@ const App = () => {
         <MySearchBar onSearch={handleSearch} />
       </header>
       <main>
-        {searchResults.length > 0 ? (
-          <MySearchResults results={searchResults} />
+        {mysearchResults.length > 0 ? (
+          <MySearchResults results={mysearchResults} />
         ) : (
           <div className="book-list">
             {books.map((book, index) => (
