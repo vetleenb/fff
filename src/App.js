@@ -3,8 +3,8 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 
 import MySearchBar from './components/MySearchBar';
-import SearchResults from './components/SearchResults';
-import BookCard from './components/BookCard';
+import MySearchResults from './components/MySearchResults';
+import MyBookCard from './components/MyBookCard';
 
 const App = () => {
   const [books, setBooks] = useState([]);
@@ -44,17 +44,17 @@ const App = () => {
       </header>
       <main>
         {searchResults.length > 0 ? (
-          <SearchResults results={searchResults} />
+          <MySearchResults results={searchResults} />
         ) : (
           <div className="book-list">
             {books.map((book, index) => (
-              <BookCard key={index} book={book} />
+              <MyBookCard key={index} book={book} />
             ))}
           </div>
         )}
       </main>
       <footer>
-        <p>&copy; 2024 Vetle Enberg Oblig</p>
+        <p>&copy; 2024 Vetle Enberg Oblig_4</p>
       </footer>
     </div>
   );
