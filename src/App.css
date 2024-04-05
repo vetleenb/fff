@@ -34,10 +34,10 @@ p {
 }
 
 .button {
-  background-color: #FFDB58; /* Sennepsfrø */
+  background-color: #FFDB58;
   padding: 8px 18px;
   border-radius: 4px;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.2s ease;
 }
 
 .button:hover {
