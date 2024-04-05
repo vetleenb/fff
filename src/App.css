@@ -1,5 +1,5 @@
 .App {
-  font-family: Arial, sans-serif;
+  font-family: Arial;
   margin: 0;
   padding: 0;
 }
@@ -23,7 +23,7 @@ footer {
 }
 
 h1, h2, h3 {
-  font-family: 'Arial', sans-serif;
+  font-family: Arial;
   font-weight: bold;
   color: #333;
 }
