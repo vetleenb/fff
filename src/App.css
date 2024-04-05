@@ -1,42 +1,48 @@
 .App {
+  padding: 0;
   font-family: Arial;
   margin: 0;
-  padding: 0;
+ 
 }
 
 header {
   background-color:  #4682B4;
   color: #fff;
-  padding: 18px;
   text-align: center;
+  padding: 18px;
+  
 }
 
 main {
-  padding: 18px;
   background-color: #FAEBD7;
+  padding: 18px;
+  
 }
 
 footer {
   background-color:  #4682B4;
-  padding: 10px;
   text-align: center;
-}
-
-h1, h2, h3 {
-  font-family: Arial;
-  font-weight: bold;
-  color: #333;
+  padding: 10px;
+  
 }
 
 p {
   font-size: 18px;
-  line-height: 1.5;
+  line-height: 1.4;
 }
+
+h1, h2, h3 {
+  color: #333;
+  font-family: Arial;
+  font-weight: bold;
+  
+}
+
 
 .button {
   background-color: #FFDB58;
-  padding: 8px 18px;
   border-radius: 4px;
+  padding: 8px 18px;
   transition: box-shadow 0.2s ease;
 }
 
